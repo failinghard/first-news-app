@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    </head>
+    <body>
+    	<div id="map" style="width:100%; height:300px;"></div>
+        <h1>John Doe #80, a -year-old White male, died on 1992-05-02</h1>
+        <script type="text/javascript">
+            var map = L.map('map').setView([33.98939885, -118.2914954], 16);
+            
+            var osmLayer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Data, imagery and map information provided by <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.'
+            });
+            map.addLayer(osmLayer);
+            var marker = L.marker([33.98939885, -118.2914954]).addTo(map);
+        </script>
+    </body>
+</html>
